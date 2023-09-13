@@ -27,6 +27,7 @@ import { withAppLayout } from 'lib/hocs/with-app-layout.hoc';
 import { AccessInfo } from 'components/access-info';
 import { getSearches, deleteSearchById } from 'apiSdk/searches';
 import { SearchInterface } from 'interfaces/search';
+import SearchPage from 'components/search-page';
 
 type ColumnType = ColumnDef<SearchInterface, unknown>;
 
@@ -207,61 +208,64 @@ export function SearchListPage(props: SearchListPageProps) {
   }
 
   return (
-    <Flex direction="column" gap={{ md: 6, base: 7 }} shadow="none">
-      <Flex justifyContent={{ md: 'space-between' }} direction={{ base: 'column', md: 'row' }} gap={{ base: '28px' }}>
-        <Flex alignItems="center" gap={1}>
-          <Text as="h1" fontSize="1.875rem" fontWeight="bold" color="base.content" {...titleProps}>
-            Searches
-          </Text>
-          <AccessInfo entity="search" />
-        </Flex>
+    // <Flex direction="column" gap={{ md: 6, base: 7 }} shadow="none">
+    //   <Flex justifyContent={{ md: 'space-between' }} direction={{ base: 'column', md: 'row' }} gap={{ base: '28px' }}>
+    //     <Flex alignItems="center" gap={1}>
+    //       <Text as="h1" fontSize="1.875rem" fontWeight="bold" color="base.content" {...titleProps}>
+    //         Searches
+    //       </Text>
+    //       <AccessInfo entity="search" />
+    //     </Flex>
 
-        {hasAccess('search', AccessOperationEnum.CREATE, AccessServiceEnum.PROJECT) && (
-          <NextLink href={`/searches/create`} passHref legacyBehavior>
-            <Button
-              onClick={(e) => e.stopPropagation()}
-              height={'2rem'}
-              padding="0rem 0.75rem"
-              fontSize={'0.875rem'}
-              fontWeight={600}
-              bg="state.info.main"
-              borderRadius={'6px'}
-              color="base.100"
-              _hover={{
-                bg: 'state.info.focus',
-              }}
-              as="a"
-            >
-              <FiPlus size={16} color="state.info.content" style={{ marginRight: '0.25rem' }} />
-              Create
-            </Button>
-          </NextLink>
-        )}
-      </Flex>
-      {showSearchFilter && (
-        <Flex
-          flexDirection={{ base: 'column', md: 'row' }}
-          justifyContent={{ base: 'flex-start', md: 'space-between' }}
-          gap={{ base: 2, md: 0 }}
-        >
-          <Box>
-            <SearchInput value={params.searchTerm} onChange={onSearchTermChange} />
-          </Box>
-        </Flex>
-      )}
+    //     {hasAccess('search', AccessOperationEnum.CREATE, AccessServiceEnum.PROJECT) && (
+    //       <NextLink href={`/searches/create`} passHref legacyBehavior>
+    //         <Button
+    //           onClick={(e) => e.stopPropagation()}
+    //           height={'2rem'}
+    //           padding="0rem 0.75rem"
+    //           fontSize={'0.875rem'}
+    //           fontWeight={600}
+    //           bg="state.info.main"
+    //           borderRadius={'6px'}
+    //           color="base.100"
+    //           _hover={{
+    //             bg: 'state.info.focus',
+    //           }}
+    //           as="a"
+    //         >
+    //           <FiPlus size={16} color="state.info.content" style={{ marginRight: '0.25rem' }} />
+    //           Create
+    //         </Button>
+    //       </NextLink>
+    //     )}
+    //   </Flex>
+    //   {showSearchFilter && (
+    //     <Flex
+    //       flexDirection={{ base: 'column', md: 'row' }}
+    //       justifyContent={{ base: 'flex-start', md: 'space-between' }}
+    //       gap={{ base: 2, md: 0 }}
+    //     >
+    //       <Box>
+    //         <SearchInput value={params.searchTerm} onChange={onSearchTermChange} />
+    //       </Box>
+    //     </Flex>
+    //   )}
 
-      {error && (
-        <Box>
-          <Error error={error} />
-        </Box>
-      )}
-      {deleteError && (
-        <Box>
-          <Error error={deleteError} />{' '}
-        </Box>
-      )}
-      {table}
-    </Flex>
+    //   {error && (
+    //     <Box>
+    //       <Error error={error} />
+    //     </Box>
+    //   )}
+    //   {deleteError && (
+    //     <Box>
+    //       <Error error={deleteError} />{' '}
+    //     </Box>
+    //   )}
+    //   {table}
+    // </Flex>
+    <Box>
+      <SearchPage />
+    </Box>
   );
 }
 
