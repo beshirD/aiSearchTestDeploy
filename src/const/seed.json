@@ -1,0 +1,2052 @@
+[
+  {
+    "search": [
+      {
+        "id": "dc914da3-1c5a-4b10-873d-b5b503610e47",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 90027,
+        "created_at": "2023-09-12T13:29:20.857Z",
+        "updated_at": "2023-09-12T23:18:16.588Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "c1d6c137-4f57-4993-a671-335d24c58e76",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 59218,
+        "created_at": "2023-09-13T00:32:37.295Z",
+        "updated_at": "2023-09-12T15:08:03.141Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "1d18477e-0d84-4688-a184-fd8fbccca1ac",
+        "query": "house",
+        "status": "pending",
+        "type": "video",
+        "results_count": 7635,
+        "created_at": "2023-09-12T09:58:27.085Z",
+        "updated_at": "2023-09-12T21:38:53.541Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "b70ac6eb-4a6f-4c65-81c5-8a4c8577f2db",
+        "query": "book",
+        "status": "completed",
+        "type": "news",
+        "results_count": 43276,
+        "created_at": "2023-09-12T19:31:47.415Z",
+        "updated_at": "2023-09-12T10:39:51.924Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "5fd003f5-05fc-4109-8d03-5033d3d3a74d",
+        "query": "music",
+        "status": "failed",
+        "type": "social",
+        "results_count": 29690,
+        "created_at": "2023-09-13T02:14:39.664Z",
+        "updated_at": "2023-09-13T01:39:59.514Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "2cc2a963-e3a3-4a60-bd6e-8405882b86a5",
+        "url": "https://example.com",
+        "description": "Official website",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T16:23:53.632Z",
+        "updated_at": "2023-09-12T22:06:31.053Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "b7b5786e-1ff5-40fa-82fc-e7dbac07bb7a",
+        "url": "https://google.com",
+        "description": "Search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-13T04:54:38.548Z",
+        "updated_at": "2023-09-12T22:59:42.960Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "67c0aef8-dc12-4b7b-b3ed-b0d3b7916172",
+        "url": "https://amazon.com",
+        "description": "Online marketplace",
+        "status": "pending",
+        "type": "partner",
+        "created_at": "2023-09-13T08:49:06.051Z",
+        "updated_at": "2023-09-12T11:37:09.543Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "1d70726c-88da-45ea-b446-f278f7dc7fa0",
+        "url": "https://facebook.com",
+        "description": "Social networking site",
+        "status": "archived",
+        "type": "affiliate",
+        "created_at": "2023-09-13T01:56:07.184Z",
+        "updated_at": "2023-09-12T11:20:28.940Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "1feb5da7-3bd9-44fd-bf86-da00605a2a98",
+        "url": "https://twitter.com",
+        "description": "Microblogging platform",
+        "status": "blocked",
+        "type": "promotional",
+        "created_at": "2023-09-13T05:31:04.149Z",
+        "updated_at": "2023-09-12T23:21:26.655Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "eaa4916a-2060-4567-91fd-e9615ca61e0b",
+        "name": "ChatBot",
+        "description": "A virtual assistant for customer support",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-13T04:38:00.636Z",
+        "updated_at": "2023-09-12T23:30:05.578Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "3ca5c63a-db9b-4aa9-869f-d524006cb6fd",
+        "name": "SupportBot",
+        "description": "An AI-powered chatbot for sales",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-13T04:42:39.721Z",
+        "updated_at": "2023-09-12T20:19:33.061Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "b4a5f76b-89a4-4b08-b986-434a3ee2bd22",
+        "name": "AssistantBot",
+        "description": "An automated bot for answering FAQs",
+        "status": "pending",
+        "type": "multilingual",
+        "created_at": "2023-09-13T06:42:30.678Z",
+        "updated_at": "2023-09-12T10:51:26.085Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "4066117c-c278-46c1-bf76-dee87939b80b",
+        "name": "HelpBot",
+        "description": "A smart bot for scheduling appointments",
+        "status": "disabled",
+        "type": "context-aware",
+        "created_at": "2023-09-12T22:43:01.128Z",
+        "updated_at": "2023-09-13T03:20:51.090Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "022bd3bb-2074-49a2-bbe9-497cc8ff4fbe",
+        "name": "AIbot",
+        "description": "A conversational bot for providing information",
+        "status": "offline",
+        "type": "emotionally intelligent",
+        "created_at": "2023-09-12T12:24:56.166Z",
+        "updated_at": "2023-09-12T15:12:48.806Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "95c3f64b-191c-4167-8dbd-5cf2e551801f",
+        "email": "Kaitlin70@gmail.com",
+        "firstName": "Laney",
+        "lastName": "Parisian",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/28887084",
+        "tenantId": null
+      },
+      {
+        "reference": "37d8f9cd-7717-42a9-98c2-57ad9e3e40a6",
+        "email": "Elmo6@yahoo.com",
+        "firstName": "Isadore",
+        "lastName": "Cole",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/46512031",
+        "tenantId": null
+      },
+      {
+        "reference": "52b77799-29e2-4c40-b91c-f802dd40f651",
+        "email": "Edward.Lebsack64@hotmail.com",
+        "firstName": "Sylvester",
+        "lastName": "Luettgen-Donnelly",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/378.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "d5d3f9f7-12ac-4dca-91dc-c941a7fad010",
+        "email": "Genesis.Crist17@gmail.com",
+        "firstName": "Kiel",
+        "lastName": "Cole",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/85669645",
+        "tenantId": null
+      },
+      {
+        "reference": "13568ca2-a759-4034-a9c6-4f2ccabdb7d4",
+        "email": "Jenifer1@gmail.com",
+        "firstName": "Theresia",
+        "lastName": "Erdman",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/551.jpg",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "218df51d-220f-448c-b677-6dc501f56a66",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 60679,
+        "created_at": "2023-09-12T10:08:59.254Z",
+        "updated_at": "2023-09-13T07:09:02.321Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "92c721e3-7a48-4bb8-8d58-8cc34b22ac7d",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 39645,
+        "created_at": "2023-09-13T01:31:29.768Z",
+        "updated_at": "2023-09-12T11:57:56.378Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "cb29d0be-5f76-4701-b19c-76cf3709aee6",
+        "query": "restaurant",
+        "status": "pending",
+        "type": "video",
+        "results_count": 86867,
+        "created_at": "2023-09-12T12:35:00.364Z",
+        "updated_at": "2023-09-13T02:15:03.990Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "e39c0b6c-c576-4713-b272-01474f0753c1",
+        "query": "movie",
+        "status": "completed",
+        "type": "news",
+        "results_count": 18945,
+        "created_at": "2023-09-12T11:30:12.429Z",
+        "updated_at": "2023-09-12T22:23:59.472Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "45c3f86b-58a0-49eb-a867-fe709f957cdb",
+        "query": "book",
+        "status": "failed",
+        "type": "social",
+        "results_count": 58094,
+        "created_at": "2023-09-13T00:05:28.012Z",
+        "updated_at": "2023-09-12T23:26:56.004Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "b14d00e5-54ec-4341-a982-8e5cca1cf95b",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T14:51:23.624Z",
+        "updated_at": "2023-09-12T23:57:41.536Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "9f472b7e-d280-47b7-92b6-541fb8aab416",
+        "url": "https://google.com",
+        "description": "A popular search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-13T08:34:01.088Z",
+        "updated_at": "2023-09-12T22:55:12.343Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "631d7d04-7c40-4ccc-b637-ed0ec1915ce1",
+        "url": "https://facebook.com",
+        "description": "A social networking site",
+        "status": "pending",
+        "type": "redirect",
+        "created_at": "2023-09-12T17:26:51.864Z",
+        "updated_at": "2023-09-12T12:18:36.425Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "6efda4d2-c906-48d4-90e5-23fb415a09f5",
+        "url": "https://amazon.com",
+        "description": "An online marketplace",
+        "status": "blocked",
+        "type": "download",
+        "created_at": "2023-09-13T03:57:51.805Z",
+        "updated_at": "2023-09-12T10:22:52.997Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "20be3e24-aaa1-473e-b3a4-bcee1465e7f4",
+        "url": "https://twitter.com",
+        "description": "A microblogging platform",
+        "status": "restricted",
+        "type": "advertisement",
+        "created_at": "2023-09-12T16:57:21.314Z",
+        "updated_at": "2023-09-13T05:34:57.857Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "9dc563eb-9f51-4152-b59d-1524c3b38e29",
+        "name": "ChatBot",
+        "description": "An intelligent virtual assistant",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-12T19:15:39.656Z",
+        "updated_at": "2023-09-13T07:55:04.938Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "62c75f75-a495-41e2-a90f-64e616ff0b71",
+        "name": "AssistantBot",
+        "description": "A chatbot for customer support",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-13T02:15:38.826Z",
+        "updated_at": "2023-09-13T06:36:54.088Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "3def7134-da39-45f9-ae9e-b7509a2b16b5",
+        "name": "SupportBot",
+        "description": "A bot that provides helpful information",
+        "status": "pending",
+        "type": "chat-oriented",
+        "created_at": "2023-09-12T21:53:08.962Z",
+        "updated_at": "2023-09-13T02:08:57.551Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "554022a9-d4e3-400b-a7f7-f49cc9367110",
+        "name": "HelpBot",
+        "description": "An AI-powered conversational agent",
+        "status": "disabled",
+        "type": "task-specific",
+        "created_at": "2023-09-12T15:26:23.953Z",
+        "updated_at": "2023-09-12T10:24:43.849Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "cc5ba435-6530-4e87-b235-7b331722b3e4",
+        "name": "AIbot",
+        "description": "A virtual bot for automated tasks",
+        "status": "archived",
+        "type": "learning",
+        "created_at": "2023-09-13T06:06:56.421Z",
+        "updated_at": "2023-09-12T19:09:56.558Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "9fdb0945-70d3-4094-ae5f-226e4af6848a",
+        "email": "Dax7@yahoo.com",
+        "firstName": "Kolby",
+        "lastName": "Frami",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/310.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "6cb25db0-79e7-4d99-bb7d-6eed84ac88dd",
+        "email": "Rosalee.Ankunding@yahoo.com",
+        "firstName": "Georgette",
+        "lastName": "Feil",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/108.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "ed73ba72-45bc-4775-8b5e-adb108af95dc",
+        "email": "Nigel_Gleichner93@hotmail.com",
+        "firstName": "Lucie",
+        "lastName": "Adams",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/194.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "1b8cca2b-76a4-434f-9eda-99d6d6d8067b",
+        "email": "Felton_Hills@gmail.com",
+        "firstName": "Camille",
+        "lastName": "Rodriguez",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/737.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "0343a7cb-1955-4eaf-b680-e2adac719f4b",
+        "email": "Shyanne72@yahoo.com",
+        "firstName": "Pamela",
+        "lastName": "Hyatt",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2486265",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "80f8720a-3e40-46d9-ae54-1d9b8742e70d",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 69683,
+        "created_at": "2023-09-12T19:42:06.321Z",
+        "updated_at": "2023-09-13T02:30:53.294Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "0a662b52-78a1-4c51-8fa4-487a8c313e42",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 9814,
+        "created_at": "2023-09-13T08:39:45.727Z",
+        "updated_at": "2023-09-13T06:32:11.626Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "6f32fbc9-e2db-4dfd-a1c1-75b018aa57f7",
+        "query": "music",
+        "status": "pending",
+        "type": "video",
+        "results_count": 52503,
+        "created_at": "2023-09-12T19:22:27.552Z",
+        "updated_at": "2023-09-12T12:26:04.409Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "2378c05c-ccad-462e-98e6-b31c43bdb97d",
+        "query": "travel",
+        "status": "completed",
+        "type": "news",
+        "results_count": 14042,
+        "created_at": "2023-09-13T07:47:04.785Z",
+        "updated_at": "2023-09-13T05:07:06.018Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "83953f32-c131-4e92-ab06-b7db50c709c2",
+        "query": "restaurant",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 54093,
+        "created_at": "2023-09-12T11:17:10.377Z",
+        "updated_at": "2023-09-12T17:53:45.232Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "b37fe071-3c1a-46e0-950b-30d6cc4fec72",
+        "url": "https://example.com",
+        "description": "Official website",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-13T01:50:13.805Z",
+        "updated_at": "2023-09-13T08:03:11.235Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "66c160bf-a3a8-4fc8-8425-6371f7226254",
+        "url": "https://google.com",
+        "description": "Popular search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-12T23:51:10.954Z",
+        "updated_at": "2023-09-12T18:42:25.796Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "82aec8e8-68c7-482b-ae8f-8f64d07fb06f",
+        "url": "https://facebook.com",
+        "description": "Social networking site",
+        "status": "pending",
+        "type": "public",
+        "created_at": "2023-09-13T01:07:11.725Z",
+        "updated_at": "2023-09-13T04:11:25.494Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "8aec3898-d2a3-4475-97b3-27cf735f6b80",
+        "url": "https://twitter.com",
+        "description": "Microblogging platform",
+        "status": "archived",
+        "type": "private",
+        "created_at": "2023-09-12T14:41:17.644Z",
+        "updated_at": "2023-09-12T21:09:20.866Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "f14e6fcf-ce16-4882-a37a-7a82f6d8260c",
+        "url": "https://linkedin.com",
+        "description": "Professional networking site",
+        "status": "blocked",
+        "type": "secure",
+        "created_at": "2023-09-12T21:51:11.212Z",
+        "updated_at": "2023-09-13T05:57:49.196Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "28cc9e84-9014-4820-aeb4-66471ff9c147",
+        "name": "Bot1",
+        "description": "An AI-powered chatbot",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-13T03:06:06.078Z",
+        "updated_at": "2023-09-12T18:06:15.519Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "7ad1411e-ee53-4760-8744-0beac52421dc",
+        "name": "Bot2",
+        "description": "Virtual assistant for businesses",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-13T05:42:35.115Z",
+        "updated_at": "2023-09-12T20:04:34.150Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "11005681-9f74-4156-9260-192c2801ac02",
+        "name": "Bot3",
+        "description": "Automated customer support bot",
+        "status": "pending",
+        "type": "image recognition",
+        "created_at": "2023-09-12T23:19:35.548Z",
+        "updated_at": "2023-09-12T17:15:54.682Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "b78cfe09-7a0f-4dc6-9332-9342c457205e",
+        "name": "Bot4",
+        "description": "Intelligent marketing bot",
+        "status": "disabled",
+        "type": "NLP-based",
+        "created_at": "2023-09-13T01:14:59.159Z",
+        "updated_at": "2023-09-12T20:04:44.135Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "70a92a54-d2d6-4a88-9dbd-b6d287e6c5a2",
+        "name": "Bot5",
+        "description": "Smart personal assistant",
+        "status": "archived",
+        "type": "machine learning",
+        "created_at": "2023-09-13T02:24:28.918Z",
+        "updated_at": "2023-09-12T11:38:21.947Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "8b093bb1-5ffa-49cc-9df3-67051ef3ab32",
+        "email": "Ole39@hotmail.com",
+        "firstName": "Makenzie",
+        "lastName": "Macejkovic",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1059.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "b53133c4-11d7-41d2-adf4-c2376873e9bb",
+        "email": "Walker.Rosenbaum55@gmail.com",
+        "firstName": "Kaleb",
+        "lastName": "Gutmann",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/36198095",
+        "tenantId": null
+      },
+      {
+        "reference": "d7b7c011-02c5-428a-be7a-77d53ffa637b",
+        "email": "Lavonne_Hermiston@gmail.com",
+        "firstName": "Kenneth",
+        "lastName": "Dibbert",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/364.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "06547006-4a46-487a-999b-93912534aaff",
+        "email": "Zander51@gmail.com",
+        "firstName": "Lilian",
+        "lastName": "Considine",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/121.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "f04bc725-f0c3-4b2e-92bc-f2b7341fa1b1",
+        "email": "Osvaldo_Glover-Bosco@yahoo.com",
+        "firstName": "Imelda",
+        "lastName": "Friesen",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/894.jpg",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "872ccefb-ff7d-445b-97b6-9705d2346d4f",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 40889,
+        "created_at": "2023-09-12T22:33:01.733Z",
+        "updated_at": "2023-09-13T04:21:53.810Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "6d7b6cde-85e9-4329-84d2-83a5d6822900",
+        "query": "banana",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 79110,
+        "created_at": "2023-09-12T18:10:12.551Z",
+        "updated_at": "2023-09-12T10:37:36.633Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "d4ccbea0-b31b-42ce-9fbd-a4c048eca37c",
+        "query": "orange",
+        "status": "pending",
+        "type": "video",
+        "results_count": 33889,
+        "created_at": "2023-09-12T19:16:24.988Z",
+        "updated_at": "2023-09-12T13:41:33.570Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "1c40d6a6-f638-4b5f-825d-5f1a6d46e644",
+        "query": "grape",
+        "status": "completed",
+        "type": "news",
+        "results_count": 87238,
+        "created_at": "2023-09-12T10:12:38.143Z",
+        "updated_at": "2023-09-13T03:00:33.224Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "52f76b81-7e66-4521-a640-f175e91bde49",
+        "query": "kiwi",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 46952,
+        "created_at": "2023-09-12T17:29:41.813Z",
+        "updated_at": "2023-09-12T11:46:24.873Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "08649f67-afed-463d-82b1-92181f89b0b9",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T13:18:11.743Z",
+        "updated_at": "2023-09-13T02:04:01.024Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "35fec051-0363-42e5-8f9e-62c5935fca94",
+        "url": "https://google.com",
+        "description": "An online shopping platform",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-12T22:57:13.652Z",
+        "updated_at": "2023-09-12T19:06:22.094Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "103af299-b5a8-4073-9df1-a5abf59e6aea",
+        "url": "https://amazon.com",
+        "description": "A popular social media site",
+        "status": "pending",
+        "type": "partner",
+        "created_at": "2023-09-12T12:58:12.447Z",
+        "updated_at": "2023-09-12T21:20:16.586Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "103ff695-55ad-41a2-915f-e8978c85ca63",
+        "url": "https://facebook.com",
+        "description": "A news portal",
+        "status": "archived",
+        "type": "affiliate",
+        "created_at": "2023-09-13T07:47:20.068Z",
+        "updated_at": "2023-09-13T01:17:11.756Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "1a264309-7fd5-4328-a2b2-4f2bd113f423",
+        "url": "https://twitter.com",
+        "description": "A video sharing platform",
+        "status": "blocked",
+        "type": "advertisement",
+        "created_at": "2023-09-12T21:23:08.735Z",
+        "updated_at": "2023-09-13T04:58:21.976Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "6e8ec372-1213-45da-aa6f-0f4185a72468",
+        "name": "ChatBot",
+        "description": "An intelligent virtual assistant",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-13T01:06:02.060Z",
+        "updated_at": "2023-09-12T09:14:53.907Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "35219065-78f3-4783-b37a-f3c9ecc62cde",
+        "name": "AssistantBot",
+        "description": "A customer support automation tool",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-12T09:57:07.454Z",
+        "updated_at": "2023-09-12T23:06:03.815Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "0db86553-77e8-4ae7-adc4-d51d88082b53",
+        "name": "SupportBot",
+        "description": "A chatbot for website",
+        "status": "testing",
+        "type": "NLP-driven",
+        "created_at": "2023-09-12T22:02:09.018Z",
+        "updated_at": "2023-09-13T00:35:06.565Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "08f59901-5cc8-4ae9-8b10-9de56e5c8b31",
+        "name": "HelpBot",
+        "description": "An AI-powered bot",
+        "status": "development",
+        "type": "rule-based",
+        "created_at": "2023-09-13T01:54:19.975Z",
+        "updated_at": "2023-09-12T09:18:52.363Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "5b5616b9-b6d0-4332-8f5d-41de63bd20b7",
+        "name": "AIbot",
+        "description": "A conversational bot",
+        "status": "maintenance",
+        "type": "machine learning",
+        "created_at": "2023-09-12T20:21:54.750Z",
+        "updated_at": "2023-09-13T06:48:21.690Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "f9cf23c5-accc-4e26-8ea3-04c76bebf36a",
+        "email": "Roosevelt12@gmail.com",
+        "firstName": "Rod",
+        "lastName": "Fritsch-Keebler",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/433.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "267ac15c-a1cd-4d43-8af7-da8b2fe23da5",
+        "email": "Curt.Pollich34@gmail.com",
+        "firstName": "Amos",
+        "lastName": "Olson",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/81.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "4a9591cb-eec2-4bce-b672-5a4dc1cfc21c",
+        "email": "Cristal_Bechtelar@gmail.com",
+        "firstName": "Reed",
+        "lastName": "Hagenes",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/93232179",
+        "tenantId": null
+      },
+      {
+        "reference": "ebe742c0-4a99-4ded-9e31-d6766d0a8865",
+        "email": "Forest_Rogahn@hotmail.com",
+        "firstName": "Johnnie",
+        "lastName": "Robel",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1125.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "d0fb6bd3-dae8-4034-a581-66fe16746e20",
+        "email": "Sabryna60@hotmail.com",
+        "firstName": "Estell",
+        "lastName": "Maggio",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/96946158",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "c6cd7727-fe72-41f4-9b8b-770e81a03c43",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 56397,
+        "created_at": "2023-09-13T00:59:38.704Z",
+        "updated_at": "2023-09-12T12:21:59.675Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "8c908b3a-9318-4a94-9dc4-b9587264e973",
+        "query": "banana",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 67484,
+        "created_at": "2023-09-13T01:55:41.291Z",
+        "updated_at": "2023-09-12T14:32:59.911Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "dc91cb9b-fc8c-41c6-b572-09e6da67ac32",
+        "query": "orange",
+        "status": "pending",
+        "type": "video",
+        "results_count": 52525,
+        "created_at": "2023-09-13T05:47:45.805Z",
+        "updated_at": "2023-09-12T14:11:14.160Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "efdc970a-786d-4a10-b097-e77975251957",
+        "query": "grape",
+        "status": "completed",
+        "type": "news",
+        "results_count": 7026,
+        "created_at": "2023-09-12T14:37:47.427Z",
+        "updated_at": "2023-09-12T14:08:47.023Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "a503a1e2-1caa-492b-9c84-5f8560e9360f",
+        "query": "watermelon",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 6498,
+        "created_at": "2023-09-12T13:47:55.286Z",
+        "updated_at": "2023-09-12T16:35:51.023Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "eef0cf94-d3ff-4d05-9f7e-abeff93bf17b",
+        "url": "https://example.com",
+        "description": "Official website",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T15:17:32.674Z",
+        "updated_at": "2023-09-12T21:10:36.614Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "2a235dbb-eb99-4e7b-9318-1eaefcb44b89",
+        "url": "https://google.com",
+        "description": "Search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-12T17:04:16.983Z",
+        "updated_at": "2023-09-13T08:11:45.275Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "eaabbf43-b54b-489e-a05d-620243c35088",
+        "url": "https://amazon.com",
+        "description": "Online marketplace",
+        "status": "pending",
+        "type": "partner",
+        "created_at": "2023-09-13T02:03:32.010Z",
+        "updated_at": "2023-09-12T10:12:38.778Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "84d0719e-4322-4213-8b6e-69aa332d75d4",
+        "url": "https://facebook.com",
+        "description": "Social networking site",
+        "status": "archived",
+        "type": "affiliate",
+        "created_at": "2023-09-13T03:13:54.972Z",
+        "updated_at": "2023-09-12T18:37:55.888Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "aeff1a66-f231-47e2-b671-deca3cfd9e7c",
+        "url": "https://twitter.com",
+        "description": "Microblogging platform",
+        "status": "blocked",
+        "type": "promotional",
+        "created_at": "2023-09-13T05:28:03.242Z",
+        "updated_at": "2023-09-13T00:01:21.677Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "9c711853-a469-49eb-905b-74816032c3b5",
+        "name": "Bot1",
+        "description": "An AI-powered virtual assistant",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-12T14:40:21.633Z",
+        "updated_at": "2023-09-13T01:40:10.036Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "f8692728-2130-4b0a-8e59-d4525b63f7cd",
+        "name": "Bot2",
+        "description": "A chatbot for customer support",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-12T20:27:35.277Z",
+        "updated_at": "2023-09-12T21:38:50.721Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "e80911fe-a4ec-4328-b906-749a60108267",
+        "name": "Bot3",
+        "description": "An automated data analysis tool",
+        "status": "pending",
+        "type": "image-processing",
+        "created_at": "2023-09-12T21:38:24.390Z",
+        "updated_at": "2023-09-12T12:10:44.892Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "e706fdab-a68b-4dd0-9a95-983c197182f6",
+        "name": "Bot4",
+        "description": "A voice recognition system",
+        "status": "disabled",
+        "type": "machine learning",
+        "created_at": "2023-09-13T03:29:00.003Z",
+        "updated_at": "2023-09-12T12:50:25.229Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "41637aee-5534-4416-acdc-a806bedda622",
+        "name": "Bot5",
+        "description": "A language translation bot",
+        "status": "offline",
+        "type": "natural language processing",
+        "created_at": "2023-09-12T11:42:28.342Z",
+        "updated_at": "2023-09-12T23:39:37.727Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "c6ed937a-a4f9-47d8-9ec1-65f6aad46c57",
+        "email": "Rupert43@yahoo.com",
+        "firstName": "Lora",
+        "lastName": "Bergstrom",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/134.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "2e50d163-7346-4524-891c-1da5d454b381",
+        "email": "Trenton_Koch54@gmail.com",
+        "firstName": "Dorris",
+        "lastName": "Franecki",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/91532769",
+        "tenantId": null
+      },
+      {
+        "reference": "b8ce4dc6-ed8a-4012-ae7f-5eb94339f273",
+        "email": "Sandy63@gmail.com",
+        "firstName": "Miguel",
+        "lastName": "Hayes",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/615.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "15f68216-0965-41d8-b628-211833994e38",
+        "email": "Wilson67@hotmail.com",
+        "firstName": "Christina",
+        "lastName": "Beer",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/356.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "26a98389-60bb-4b55-8c2d-d5fdb45d13f5",
+        "email": "Neva_Ryan@gmail.com",
+        "firstName": "Garett",
+        "lastName": "Reilly",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1017.jpg",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "f4139797-a74d-4c40-b742-caf426174208",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 47398,
+        "created_at": "2023-09-12T15:31:07.490Z",
+        "updated_at": "2023-09-12T22:27:29.187Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "0576d97e-3039-432b-a16c-361649ff8f44",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 22700,
+        "created_at": "2023-09-12T16:08:53.558Z",
+        "updated_at": "2023-09-13T07:02:31.822Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "d2dfd44d-9e3d-4132-9a79-7bb95821152e",
+        "query": "football",
+        "status": "pending",
+        "type": "video",
+        "results_count": 32299,
+        "created_at": "2023-09-12T19:14:01.246Z",
+        "updated_at": "2023-09-12T15:36:53.170Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "4e867db9-504d-4a46-847e-bb5f1999ef1d",
+        "query": "travel",
+        "status": "completed",
+        "type": "news",
+        "results_count": 72352,
+        "created_at": "2023-09-12T10:21:44.300Z",
+        "updated_at": "2023-09-12T15:39:46.745Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "91278485-7fb3-4faa-87ff-60d87da4050b",
+        "query": "music",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 91432,
+        "created_at": "2023-09-12T22:43:25.016Z",
+        "updated_at": "2023-09-13T00:25:11.338Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "79476a31-b70f-435f-9229-ceab71ec241b",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-13T01:45:02.015Z",
+        "updated_at": "2023-09-13T03:03:30.061Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "23a1a992-cb94-4c51-932e-db68bd3337d9",
+        "url": "https://google.com",
+        "description": "A popular search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-13T01:19:05.997Z",
+        "updated_at": "2023-09-12T10:05:54.311Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "7af59aa4-d71c-4921-8e67-f1235b742e92",
+        "url": "https://facebook.com",
+        "description": "A social networking site",
+        "status": "pending",
+        "type": "social",
+        "created_at": "2023-09-12T16:49:35.162Z",
+        "updated_at": "2023-09-13T05:07:36.961Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "f42eb6bf-92c5-4b82-8640-fd2c56c61412",
+        "url": "https://twitter.com",
+        "description": "A microblogging platform",
+        "status": "archived",
+        "type": "news",
+        "created_at": "2023-09-12T23:42:19.390Z",
+        "updated_at": "2023-09-12T18:45:30.171Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "c48dfb9c-00a2-4111-806a-f2c9232c9230",
+        "url": "https://linkedin.com",
+        "description": "A professional networking site",
+        "status": "blocked",
+        "type": "blog",
+        "created_at": "2023-09-13T04:11:02.616Z",
+        "updated_at": "2023-09-12T15:12:46.533Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "2e71f4b1-d683-49d3-9cea-71fcce9a8966",
+        "name": "ChatBot",
+        "description": "An AI-powered chatbot for customer support",
+        "status": "active",
+        "type": "text",
+        "created_at": "2023-09-13T00:34:18.604Z",
+        "updated_at": "2023-09-12T23:23:28.227Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "bfd836f5-2aa1-49f8-b304-6a6629037995",
+        "name": "SupportBot",
+        "description": "A virtual assistant to help with tasks",
+        "status": "inactive",
+        "type": "voice",
+        "created_at": "2023-09-13T02:56:41.703Z",
+        "updated_at": "2023-09-12T16:53:30.908Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "35175b9f-b627-4208-9502-aeb23a56f363",
+        "name": "AssistantBot",
+        "description": "A bot that provides helpful information",
+        "status": "pending",
+        "type": "chat",
+        "created_at": "2023-09-12T12:46:21.737Z",
+        "updated_at": "2023-09-12T16:08:16.835Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "2d560f57-1275-406a-bbd0-1d684252df45",
+        "name": "HelpBot",
+        "description": "A bot that assists with troubleshooting",
+        "status": "disabled",
+        "type": "virtual",
+        "created_at": "2023-09-12T13:37:00.901Z",
+        "updated_at": "2023-09-13T05:57:07.917Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "bff5be67-5315-4507-8c06-11258fc37aa9",
+        "name": "InfoBot",
+        "description": "An intelligent bot for answering queries",
+        "status": "archived",
+        "type": "automated",
+        "created_at": "2023-09-13T07:54:24.237Z",
+        "updated_at": "2023-09-12T12:38:32.463Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "11b353d3-a3fd-43a8-82e9-5f21cec5f07f",
+        "email": "Kacie_Champlin26@gmail.com",
+        "firstName": "Hillary",
+        "lastName": "Jacobs",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/15951685",
+        "tenantId": null
+      },
+      {
+        "reference": "bf97d2e7-2311-4684-89e1-a14bfd559a82",
+        "email": "Jillian23@yahoo.com",
+        "firstName": "Kasandra",
+        "lastName": "Morissette",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/49265597",
+        "tenantId": null
+      },
+      {
+        "reference": "876eb05f-39c4-41ce-a254-7bb8bf895f7e",
+        "email": "Lizeth31@gmail.com",
+        "firstName": "Jaclyn",
+        "lastName": "Koss",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/71165249",
+        "tenantId": null
+      },
+      {
+        "reference": "fac349fa-7fdd-4410-9e05-5da94b401a0f",
+        "email": "Makayla.Bartoletti@gmail.com",
+        "firstName": "Lauretta",
+        "lastName": "Stiedemann",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/318.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "602c06bd-679f-4a13-8f2d-2dd1f2ce5e42",
+        "email": "Carole90@hotmail.com",
+        "firstName": "Reina",
+        "lastName": "Heaney",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/16301109",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "599630cc-a12d-462f-983f-c2735c0ceacf",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 33671,
+        "created_at": "2023-09-13T00:35:07.515Z",
+        "updated_at": "2023-09-13T01:37:38.915Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "d10f52b5-1793-497f-875a-5c55e0903147",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 83998,
+        "created_at": "2023-09-13T00:07:41.635Z",
+        "updated_at": "2023-09-13T02:36:07.052Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "091faeec-5a2a-4651-a175-e814e7d8ed39",
+        "query": "hotel",
+        "status": "pending",
+        "type": "video",
+        "results_count": 63830,
+        "created_at": "2023-09-12T11:59:37.082Z",
+        "updated_at": "2023-09-13T01:59:15.566Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "0907574d-5fb5-4f4c-8450-3e16d8abfeb8",
+        "query": "football",
+        "status": "completed",
+        "type": "news",
+        "results_count": 98220,
+        "created_at": "2023-09-12T21:46:57.760Z",
+        "updated_at": "2023-09-12T21:11:33.186Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "e6946603-dd43-4619-a399-7eced7d04703",
+        "query": "music",
+        "status": "cancelled",
+        "type": "map",
+        "results_count": 5320,
+        "created_at": "2023-09-12T13:37:35.121Z",
+        "updated_at": "2023-09-12T19:43:04.642Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "67d3f722-bb35-45fd-83a2-3994dda52116",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T09:13:15.920Z",
+        "updated_at": "2023-09-13T02:39:30.185Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "2b0aa807-39be-45f4-942f-4552bcd9f4cf",
+        "url": "https://google.com",
+        "description": "An online marketplace for shopping",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-13T04:08:41.875Z",
+        "updated_at": "2023-09-13T04:19:54.526Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "f377947f-b472-4ebf-b426-4541a0fd6c00",
+        "url": "https://amazon.com",
+        "description": "A social networking platform",
+        "status": "pending",
+        "type": "secure",
+        "created_at": "2023-09-13T01:50:30.617Z",
+        "updated_at": "2023-09-13T09:02:46.147Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "72bda1a8-89e0-41f9-a9dc-e831fc889f67",
+        "url": "https://facebook.com",
+        "description": "A popular search engine",
+        "status": "blocked",
+        "type": "public",
+        "created_at": "2023-09-13T06:46:45.169Z",
+        "updated_at": "2023-09-13T02:19:37.214Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "dc84bb59-dfd2-4060-8cbe-2303183589e9",
+        "url": "https://twitter.com",
+        "description": "A platform for sharing updates",
+        "status": "restricted",
+        "type": "private",
+        "created_at": "2023-09-12T11:18:26.978Z",
+        "updated_at": "2023-09-12T12:16:18.091Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "d62f5480-e6c4-4d12-8b4a-e7ab84ac08d0",
+        "name": "ChatBot",
+        "description": "An AI-powered chatbot for customer support",
+        "status": "active",
+        "type": "text",
+        "created_at": "2023-09-13T04:45:44.558Z",
+        "updated_at": "2023-09-12T19:33:40.711Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "0f510f6b-da7a-4d0d-be67-be0181090411",
+        "name": "SupportBot",
+        "description": "A virtual assistant to provide assistance",
+        "status": "inactive",
+        "type": "voice",
+        "created_at": "2023-09-12T21:43:02.618Z",
+        "updated_at": "2023-09-13T02:10:28.786Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "6e22bbeb-69ea-4977-a374-38fd22803595",
+        "name": "AssistantBot",
+        "description": "A bot designed to help users with their queries",
+        "status": "pending",
+        "type": "chat",
+        "created_at": "2023-09-12T18:26:45.959Z",
+        "updated_at": "2023-09-12T23:55:18.141Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "c57ddf3b-2f22-4226-b769-c9b7233fbae4",
+        "name": "HelpBot",
+        "description": "An intelligent bot for providing information",
+        "status": "disabled",
+        "type": "email",
+        "created_at": "2023-09-12T14:41:56.776Z",
+        "updated_at": "2023-09-13T01:28:06.398Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "0db725ef-7dff-41e4-8d34-3312cc852e50",
+        "name": "InfoBot",
+        "description": "A helpful bot for answering questions",
+        "status": "enabled",
+        "type": "social media",
+        "created_at": "2023-09-12T17:52:32.320Z",
+        "updated_at": "2023-09-12T17:43:24.401Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "aca34c06-6c92-4a83-ba3f-667fccfb0e8d",
+        "email": "Gerry.Gutkowski9@gmail.com",
+        "firstName": "Kennith",
+        "lastName": "Berge",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/691.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "7f0d9cb8-8be4-4fd5-8bf7-313f603d54fa",
+        "email": "Frida_Murazik13@gmail.com",
+        "firstName": "Miguel",
+        "lastName": "Yost",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/18238774",
+        "tenantId": null
+      },
+      {
+        "reference": "6d42a3df-dd46-4526-9d95-1e2cb611da96",
+        "email": "Earl.Osinski81@hotmail.com",
+        "firstName": "Cesar",
+        "lastName": "Mills",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/841.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "78175b40-5081-4706-b54c-842e997ef907",
+        "email": "Bonnie_Jast-Weber90@gmail.com",
+        "firstName": "Eden",
+        "lastName": "Ritchie",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/10005981",
+        "tenantId": null
+      },
+      {
+        "reference": "8d9aa8b8-d1cb-4057-ba07-d4f4f0a0da47",
+        "email": "Ezequiel_Farrell@gmail.com",
+        "firstName": "Travis",
+        "lastName": "Bernhard",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43526264",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "d43c3388-9abf-405a-9996-7d27debfc8f1",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 46208,
+        "created_at": "2023-09-13T07:28:25.050Z",
+        "updated_at": "2023-09-12T19:32:07.748Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "d4447483-d7f4-48b8-be1c-e8e3a9057d3d",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 63145,
+        "created_at": "2023-09-12T21:05:15.415Z",
+        "updated_at": "2023-09-12T12:05:41.285Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "3eaded54-45dc-4d49-b8c2-030817d45419",
+        "query": "house",
+        "status": "pending",
+        "type": "video",
+        "results_count": 78059,
+        "created_at": "2023-09-13T07:24:23.362Z",
+        "updated_at": "2023-09-13T03:43:06.234Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "11cb0c91-9c2a-4b3b-b110-02b00779de15",
+        "query": "music",
+        "status": "completed",
+        "type": "news",
+        "results_count": 49795,
+        "created_at": "2023-09-12T18:54:56.785Z",
+        "updated_at": "2023-09-12T15:20:38.603Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "04d7c185-97bb-4be9-9dd4-36cf8fe636fe",
+        "query": "travel",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 65087,
+        "created_at": "2023-09-12T12:32:46.564Z",
+        "updated_at": "2023-09-13T07:34:09.553Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "f053c4cb-95f1-44aa-832a-aae708d98e25",
+        "url": "https://example.com",
+        "description": "Official website",
+        "status": "active",
+        "type": "website",
+        "created_at": "2023-09-13T02:47:20.278Z",
+        "updated_at": "2023-09-13T05:21:18.677Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "a781e6a7-dcd0-4296-8761-a7b719dd9d01",
+        "url": "https://google.com",
+        "description": "Popular search engine",
+        "status": "inactive",
+        "type": "search engine",
+        "created_at": "2023-09-13T06:21:35.950Z",
+        "updated_at": "2023-09-13T05:30:31.630Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "d8e547cd-2f4e-4398-afef-5fc2a3cea6bb",
+        "url": "https://amazon.com",
+        "description": "Online marketplace",
+        "status": "pending",
+        "type": "e-commerce",
+        "created_at": "2023-09-13T01:45:42.521Z",
+        "updated_at": "2023-09-13T04:25:53.654Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "c34a9304-54ba-4121-ae17-4d459ad62eab",
+        "url": "https://facebook.com",
+        "description": "Social networking site",
+        "status": "archived",
+        "type": "social media",
+        "created_at": "2023-09-12T10:34:15.650Z",
+        "updated_at": "2023-09-13T05:45:19.686Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "8b2198f5-3ef5-4c7c-baa4-f0886c873317",
+        "url": "https://twitter.com",
+        "description": "Microblogging platform",
+        "status": "blocked",
+        "type": "microblogging",
+        "created_at": "2023-09-13T03:01:35.696Z",
+        "updated_at": "2023-09-13T04:26:54.503Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "421e5b08-7e51-4062-a4d7-7ebfd4b3ae42",
+        "name": "ChatBot",
+        "description": "An AI-powered chatbot for customer support",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-13T04:30:01.151Z",
+        "updated_at": "2023-09-13T00:44:38.304Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "fa3da933-f5b5-40ac-a913-1ede347beb9f",
+        "name": "SupportBot",
+        "description": "An intelligent virtual assistant",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-13T03:43:21.420Z",
+        "updated_at": "2023-09-12T17:03:27.203Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "21b2d0fb-af68-435d-b5bc-535c643a51e2",
+        "name": "AssistantBot",
+        "description": "A bot that provides helpful information",
+        "status": "pending",
+        "type": "chat-oriented",
+        "created_at": "2023-09-12T22:14:09.488Z",
+        "updated_at": "2023-09-12T15:44:11.726Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "46cc6586-3d9b-4e05-bdd5-e746c7ea66be",
+        "name": "HelpBot",
+        "description": "A bot designed to assist users",
+        "status": "disabled",
+        "type": "task-specific",
+        "created_at": "2023-09-13T01:35:12.898Z",
+        "updated_at": "2023-09-12T17:57:39.839Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "f7bf1e75-f4ef-4b1b-a265-2009349517f7",
+        "name": "ServiceBot",
+        "description": "A bot that offers various services",
+        "status": "archived",
+        "type": "conversational",
+        "created_at": "2023-09-12T16:05:31.877Z",
+        "updated_at": "2023-09-12T09:39:04.538Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "29a7f8a1-5c71-4dec-b3c6-642eb42e2748",
+        "email": "Julia_Rowe@gmail.com",
+        "firstName": "Xavier",
+        "lastName": "Kautzer",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1145.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "4ec1a97c-2397-4370-b113-d57d1937f183",
+        "email": "Kristin92@hotmail.com",
+        "firstName": "Golda",
+        "lastName": "Brown",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/96377115",
+        "tenantId": null
+      },
+      {
+        "reference": "adce917c-4db2-4dc9-894a-d7d767dd84c5",
+        "email": "Kara26@yahoo.com",
+        "firstName": "Dahlia",
+        "lastName": "Lueilwitz",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/16142971",
+        "tenantId": null
+      },
+      {
+        "reference": "38060cb7-447f-48be-8f9b-8cf5b8162a55",
+        "email": "Octavia_Corkery@gmail.com",
+        "firstName": "Neva",
+        "lastName": "Gerlach",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1082.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "a3c5ff45-d9cb-4f92-8550-2375abeede70",
+        "email": "Jayde_Aufderhar9@hotmail.com",
+        "firstName": "Sydnie",
+        "lastName": "Collins",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/6.jpg",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "f4df985b-0b3d-49c9-bd12-6981c2bef813",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 83617,
+        "created_at": "2023-09-13T08:45:58.269Z",
+        "updated_at": "2023-09-12T12:07:51.679Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "ced94c7b-c91e-4fe0-8fb9-8cd50dc41aab",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 90793,
+        "created_at": "2023-09-13T02:24:40.521Z",
+        "updated_at": "2023-09-13T04:55:55.237Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "53bff9af-f2db-415a-a3c9-dcf272d20fdb",
+        "query": "restaurant",
+        "status": "pending",
+        "type": "video",
+        "results_count": 35869,
+        "created_at": "2023-09-13T00:43:48.953Z",
+        "updated_at": "2023-09-12T11:47:59.944Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "59481bcc-dc8d-4bac-a124-626a7eaf908c",
+        "query": "vacation",
+        "status": "completed",
+        "type": "news",
+        "results_count": 1287,
+        "created_at": "2023-09-13T03:50:04.556Z",
+        "updated_at": "2023-09-13T02:55:25.458Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "59a9387f-cf44-43e1-bd5c-e7ee57c3b794",
+        "query": "music",
+        "status": "failed",
+        "type": "social",
+        "results_count": 61820,
+        "created_at": "2023-09-13T03:27:00.213Z",
+        "updated_at": "2023-09-12T23:17:25.193Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "8f5e1634-ea4f-4834-acb9-7e16afa1b55a",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "external",
+        "created_at": "2023-09-12T12:46:27.849Z",
+        "updated_at": "2023-09-13T05:32:59.364Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "35bfac4b-579e-4ea3-92e2-db591cb0810e",
+        "url": "https://google.com",
+        "description": "A popular search engine",
+        "status": "inactive",
+        "type": "internal",
+        "created_at": "2023-09-12T18:04:35.590Z",
+        "updated_at": "2023-09-13T05:17:50.676Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "b43a4a7a-5323-4c20-a79e-a19ff177ef2f",
+        "url": "https://amazon.com",
+        "description": "An online marketplace",
+        "status": "pending",
+        "type": "redirect",
+        "created_at": "2023-09-12T19:29:09.164Z",
+        "updated_at": "2023-09-12T17:32:34.528Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "a1b5895d-22ee-4fb3-998f-0dfde0282c7e",
+        "url": "https://facebook.com",
+        "description": "A social networking platform",
+        "status": "blocked",
+        "type": "download",
+        "created_at": "2023-09-12T17:25:27.104Z",
+        "updated_at": "2023-09-12T19:37:13.589Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "c7e50127-0af3-4684-813f-480b627f3be8",
+        "url": "https://twitter.com",
+        "description": "A microblogging platform",
+        "status": "restricted",
+        "type": "advertisement",
+        "created_at": "2023-09-12T11:57:40.475Z",
+        "updated_at": "2023-09-12T15:55:56.552Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "b4d24bdd-3778-439b-84d9-cc4bcbd3f0c9",
+        "name": "ChatBot",
+        "description": "An AI-powered chatbot for customer support",
+        "status": "active",
+        "type": "text-based",
+        "created_at": "2023-09-13T08:05:14.102Z",
+        "updated_at": "2023-09-12T23:28:45.906Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "0b7b7455-f77b-407f-b036-59b15643e8c8",
+        "name": "SupportBot",
+        "description": "A virtual assistant for managing tasks",
+        "status": "inactive",
+        "type": "voice-enabled",
+        "created_at": "2023-09-13T01:15:19.285Z",
+        "updated_at": "2023-09-12T13:19:31.094Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "53e6796f-4926-48b2-8a1e-3dd5e5dfcc47",
+        "name": "AssistantBot",
+        "description": "An automated bot for providing help and guidance",
+        "status": "pending",
+        "type": "AI-driven",
+        "created_at": "2023-09-13T09:03:11.960Z",
+        "updated_at": "2023-09-12T15:52:39.498Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "1425dfdc-7077-486a-8a5d-bb3c58e5cfac",
+        "name": "HelpBot",
+        "description": "A bot designed to assist users with their queries",
+        "status": "disabled",
+        "type": "task-oriented",
+        "created_at": "2023-09-12T09:57:44.198Z",
+        "updated_at": "2023-09-12T19:19:00.400Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "f0502637-2c9f-4d82-ac95-0e19e3cd6277",
+        "name": "VirtualBot",
+        "description": "A virtual bot that can perform various tasks",
+        "status": "archived",
+        "type": "conversational",
+        "created_at": "2023-09-13T07:02:52.513Z",
+        "updated_at": "2023-09-12T15:53:54.101Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "704bac14-b322-45c4-aefb-be15416fdf56",
+        "email": "Domingo62@hotmail.com",
+        "firstName": "Aglae",
+        "lastName": "Jaskolski",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "3affb2e0-ed53-452e-869a-ba888309ef3c",
+        "email": "Frank.Kutch69@gmail.com",
+        "firstName": "Jazlyn",
+        "lastName": "Leffler",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/22918805",
+        "tenantId": null
+      },
+      {
+        "reference": "29f8800b-0446-4a54-9dc4-4ae6a35ea4c9",
+        "email": "Kiley_Farrell50@yahoo.com",
+        "firstName": "Lisette",
+        "lastName": "Will",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/77709314",
+        "tenantId": null
+      },
+      {
+        "reference": "607fc487-8057-45e2-812c-122feb437f60",
+        "email": "Rhoda_Kuvalis@gmail.com",
+        "firstName": "Georgiana",
+        "lastName": "Kub",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/80003385",
+        "tenantId": null
+      },
+      {
+        "reference": "fc4b5201-e895-432f-adec-0248b4f39067",
+        "email": "Calista.Schroeder9@gmail.com",
+        "firstName": "Maryam",
+        "lastName": "Hills",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/211.jpg",
+        "tenantId": null
+      }
+    ]
+  },
+  {
+    "search": [
+      {
+        "id": "7117d9f3-987d-4ae8-a092-86140dbc4d20",
+        "query": "apple",
+        "status": "active",
+        "type": "web",
+        "results_count": 19618,
+        "created_at": "2023-09-13T04:38:17.418Z",
+        "updated_at": "2023-09-12T12:49:13.953Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "f52d08b7-f407-47e7-9266-5235342dfc29",
+        "query": "car",
+        "status": "inactive",
+        "type": "image",
+        "results_count": 99789,
+        "created_at": "2023-09-12T20:03:58.404Z",
+        "updated_at": "2023-09-12T14:42:04.508Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "5c8c9426-3079-47d1-8875-d70bedbb80cf",
+        "query": "music",
+        "status": "pending",
+        "type": "video",
+        "results_count": 29435,
+        "created_at": "2023-09-12T19:13:31.851Z",
+        "updated_at": "2023-09-13T00:28:41.825Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "b0e7a132-0333-4cb6-b131-881b141f7ac1",
+        "query": "travel",
+        "status": "completed",
+        "type": "news",
+        "results_count": 12050,
+        "created_at": "2023-09-13T07:26:23.932Z",
+        "updated_at": "2023-09-12T18:57:20.313Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "f86fa648-0637-480f-b70a-f23ce5b0cfe4",
+        "query": "food",
+        "status": "cancelled",
+        "type": "social",
+        "results_count": 88552,
+        "created_at": "2023-09-13T06:53:51.694Z",
+        "updated_at": "2023-09-13T05:16:00.870Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "link": [
+      {
+        "id": "585ede6e-d917-4b12-af7e-1cd25d544e8a",
+        "url": "https://example.com",
+        "description": "A useful website for information",
+        "status": "active",
+        "type": "article",
+        "created_at": "2023-09-12T23:52:28.411Z",
+        "updated_at": "2023-09-13T04:51:56.229Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "487b988d-9e4c-438c-86d6-f80353a30a84",
+        "url": "https://google.com",
+        "description": "A popular search engine",
+        "status": "inactive",
+        "type": "video",
+        "created_at": "2023-09-13T08:37:36.893Z",
+        "updated_at": "2023-09-13T03:31:56.790Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "a9613887-411c-4498-a886-24549a74c75d",
+        "url": "https://facebook.com",
+        "description": "A social networking platform",
+        "status": "pending",
+        "type": "image",
+        "created_at": "2023-09-12T20:41:34.508Z",
+        "updated_at": "2023-09-13T01:02:41.311Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "103c4f41-3f4d-40b1-87f9-d3774915035c",
+        "url": "https://twitter.com",
+        "description": "A microblogging service",
+        "status": "blocked",
+        "type": "blog",
+        "created_at": "2023-09-12T20:10:28.179Z",
+        "updated_at": "2023-09-13T05:26:50.215Z",
+        "user_id": "user_entity_pk"
+      },
+      {
+        "id": "83606617-e20c-43d9-8963-87bc6708912f",
+        "url": "https://linkedin.com",
+        "description": "A professional networking site",
+        "status": "restricted",
+        "type": "forum",
+        "created_at": "2023-09-12T20:48:13.172Z",
+        "updated_at": "2023-09-13T04:54:15.247Z",
+        "user_id": "user_entity_pk"
+      }
+    ],
+    "bot": [
+      {
+        "id": "a778e579-19e6-4686-8d10-93e7e8024421",
+        "name": "Bot1",
+        "description": "A helpful chatbot for customer support",
+        "status": "active",
+        "type": "voice",
+        "created_at": "2023-09-12T21:16:13.594Z",
+        "updated_at": "2023-09-13T00:48:21.451Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "73635351-1889-41f9-a3a6-bb51db1ce073",
+        "name": "Bot2",
+        "description": "An AI-powered virtual assistant",
+        "status": "inactive",
+        "type": "text",
+        "created_at": "2023-09-13T08:01:50.831Z",
+        "updated_at": "2023-09-12T14:45:19.410Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "93d78fa1-276c-4f51-beb1-4fa84cc4a4ec",
+        "name": "Bot3",
+        "description": "A smart bot for task automation",
+        "status": "pending",
+        "type": "chat",
+        "created_at": "2023-09-12T13:09:10.659Z",
+        "updated_at": "2023-09-13T08:35:37.260Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "9a1a5dc5-2684-4d6b-9d32-fde3aef040fd",
+        "name": "Bot4",
+        "description": "A friendly bot for entertainment",
+        "status": "disabled",
+        "type": "virtual",
+        "created_at": "2023-09-12T20:41:26.514Z",
+        "updated_at": "2023-09-13T03:41:41.824Z",
+        "organization_id": "main_entity_pk"
+      },
+      {
+        "id": "45ffbe68-c853-4d70-aaea-c6eff308804d",
+        "name": "Bot5",
+        "description": "An intelligent bot for data analysis",
+        "status": "archived",
+        "type": "assistant",
+        "created_at": "2023-09-12T21:12:52.443Z",
+        "updated_at": "2023-09-12T13:58:25.785Z",
+        "organization_id": "main_entity_pk"
+      }
+    ],
+    "roqUser": [
+      {
+        "reference": "efecca1d-74ad-4ec3-a7a4-26b382155b1b",
+        "email": "Karine.Hegmann-Connelly31@yahoo.com",
+        "firstName": "Hilario",
+        "lastName": "Yundt-Upton",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/129.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "ab564e21-8909-41ec-899c-4d55cd8209d3",
+        "email": "Naomi_DuBuque@yahoo.com",
+        "firstName": "Deshaun",
+        "lastName": "Hermann",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/83742618",
+        "tenantId": null
+      },
+      {
+        "reference": "1b6e165d-eb15-4dad-aea6-50e5ee7c29ef",
+        "email": "Cassandre.Rath78@hotmail.com",
+        "firstName": "Bridget",
+        "lastName": "Crona",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/748.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "974c992c-c875-4977-b9f1-a23b92ad3040",
+        "email": "Sonny.Schinner82@yahoo.com",
+        "firstName": "Alfreda",
+        "lastName": "Cole",
+        "active": true,
+        "avatarUrl": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/835.jpg",
+        "tenantId": null
+      },
+      {
+        "reference": "10b7fc01-78fa-45b2-a0df-b6c333f164bd",
+        "email": "Daniela.Conroy@yahoo.com",
+        "firstName": "Alan",
+        "lastName": "Leuschke",
+        "active": true,
+        "avatarUrl": "https://avatars.githubusercontent.com/u/78725368",
+        "tenantId": null
+      }
+    ]
+  }
+]
