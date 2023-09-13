@@ -148,5 +148,5 @@ function HomePage() {
 
 export default requireNextAuth({
   redirectIfAuthenticated: true,
-  redirectTo: '/dashboard',
+  redirectTo: '/searches',
 })(HomePage);
