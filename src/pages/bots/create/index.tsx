@@ -51,9 +51,6 @@ function BotCreatePage() {
     initialValues: {
       name: '',
       description: '',
-      status: '',
-      type: '',
-      organization_id: (router.query.organization_id as string) ?? null,
     },
     validationSchema: botValidationSchema,
     onSubmit: handleSubmit,
@@ -112,37 +109,14 @@ function BotCreatePage() {
               onChange: formik.handleChange,
             }}
           />
-
-          <TextInput
-            error={formik.errors.status}
-            label={'Status'}
-            props={{
-              name: 'status',
-              placeholder: 'Status',
-              value: formik.values?.status,
-              onChange: formik.handleChange,
-            }}
-          />
-
-          <TextInput
-            error={formik.errors.type}
-            label={'Type'}
-            props={{
-              name: 'type',
-              placeholder: 'Type',
-              value: formik.values?.type,
-              onChange: formik.handleChange,
-            }}
-          />
-
-          <AsyncSelect<OrganizationInterface>
+          {/* <AsyncSelect<OrganizationInterface>
             formik={formik}
             name={'organization_id'}
             label={'Select Organization'}
             placeholder={'Select Organization'}
             fetcher={getOrganizations}
             labelField={'name'}
-          />
+          /> */}
           <Flex justifyContent={'flex-start'}>
             <Button
               isDisabled={formik?.isSubmitting}

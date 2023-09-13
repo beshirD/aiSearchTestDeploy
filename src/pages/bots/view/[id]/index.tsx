@@ -115,31 +115,6 @@ function BotViewPage() {
                 <FormListItem label="Name" text={data?.name} />
 
                 <FormListItem label="Description" text={data?.description} />
-
-                <FormListItem label="Status" text={data?.status} />
-
-                <FormListItem label="Type" text={data?.type} />
-
-                <FormListItem
-                  label="Created At"
-                  text={data?.created_at ? format(parseISO(data?.created_at as unknown as string), 'dd-MM-yyyy') : ''}
-                />
-
-                <FormListItem
-                  label="Updated At"
-                  text={data?.updated_at ? format(parseISO(data?.updated_at as unknown as string), 'dd-MM-yyyy') : ''}
-                />
-
-                {hasAccess('organization', AccessOperationEnum.READ, AccessServiceEnum.PROJECT) && (
-                  <FormListItem
-                    label="Organization"
-                    text={
-                      <Link as={NextLink} href={`/organizations/view/${data?.organization?.id}`}>
-                        {data?.organization?.name}
-                      </Link>
-                    }
-                  />
-                )}
               </List>
             </FormWrapper>
           </>

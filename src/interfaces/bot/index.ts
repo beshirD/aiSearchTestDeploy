@@ -5,12 +5,9 @@ export interface BotInterface {
   id?: string;
   name: string;
   description?: string;
-  organization_id: string;
-  status: string;
-  type: string;
+  organization_id?: string;
   created_at?: any;
   updated_at?: any;
-
   organization?: OrganizationInterface;
   _count?: {};
 }
@@ -20,6 +17,4 @@ export interface BotGetQueryInterface extends GetQueryInterface {
   name?: string;
   description?: string;
   organization_id?: string;
-  status?: string;
-  type?: string;
 }

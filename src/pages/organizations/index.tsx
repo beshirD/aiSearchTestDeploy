@@ -75,7 +75,7 @@ export function OrganizationListPage(props: OrganizationListPageProps) {
         offset: params.pageNumber * params.pageSize,
         searchTerm: params.searchTerm,
         order: params.order,
-        searchTermKeys: ['description.contains', 'status.contains', 'industry.contains', 'name.contains'],
+        searchTermKeys: ['description.contains', 'industry.contains', 'name.contains'],
         ...(params.filters || {}),
       }),
     [params.pageSize, params.pageNumber, params.searchTerm, params.order, params.filters],

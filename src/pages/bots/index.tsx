@@ -75,7 +75,7 @@ export function BotListPage(props: BotListPageProps) {
         offset: params.pageNumber * params.pageSize,
         searchTerm: params.searchTerm,
         order: params.order,
-        searchTermKeys: ['name.contains', 'description.contains', 'status.contains', 'type.contains'],
+        searchTermKeys: ['name.contains', 'description.contains'],
         ...(params.filters || {}),
       }),
     [params.pageSize, params.pageNumber, params.searchTerm, params.order, params.filters],
@@ -108,24 +108,22 @@ export function BotListPage(props: BotListPageProps) {
   const columns: ColumnType[] = [
     { id: 'name', header: 'Name', accessorKey: 'name' },
     { id: 'description', header: 'Description', accessorKey: 'description' },
-    { id: 'status', header: 'Status', accessorKey: 'status' },
-    { id: 'type', header: 'Type', accessorKey: 'type' },
-    hasAccess('organization', AccessOperationEnum.READ, AccessServiceEnum.PROJECT)
-      ? {
-          id: 'organization',
-          header: 'Organization',
-          accessorKey: 'organization',
-          cell: ({ row: { original: record } }: any) => (
-            <Link
-              as={NextLink}
-              onClick={(e) => e.stopPropagation()}
-              href={`/organizations/view/${record.organization?.id}`}
-            >
-              {record.organization?.name}
-            </Link>
-          ),
-        }
-      : null,
+    // hasAccess('organization', AccessOperationEnum.READ, AccessServiceEnum.PROJECT)
+    //   ? {
+    //       id: 'organization',
+    //       header: 'Organization',
+    //       accessorKey: 'organization',
+    //       cell: ({ row: { original: record } }: any) => (
+    //         <Link
+    //           as={NextLink}
+    //           onClick={(e) => e.stopPropagation()}
+    //           href={`/organizations/view/${record.organization?.id}`}
+    //         >
+    //           {record.organization?.name}
+    //         </Link>
+    //       ),
+    //     }
+    //   : null,
     !hideActions
       ? {
           id: 'actions',

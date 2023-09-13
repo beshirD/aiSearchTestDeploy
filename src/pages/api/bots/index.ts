@@ -39,21 +39,32 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       })
       .findManyPaginated({
         ...convertQueryToPrismaUtil(query, 'bot'),
+      
+      
         take: limit,
+        
         skip: offset,
         ...(order?.length && {
           orderBy: getOrderByOptions(order),
         }),
       });
+      console.log({response})
     return res.status(200).json(response);
   }
 
   async function createBot() {
     await botValidationSchema.validate(req.body);
     const body = { ...req.body };
+    const user = await prisma.user.findMany({
+      where: { roq_user_id: roqUserId },
+      include: { organization: true },
+    });    
+    const org  = await prisma.organization.findFirst({where:{
+      user_id:user[0].id
+    }})
 
     const data = await prisma.bot.create({
-      data: body,
+      data: {...body,organization_id:org.id},
     });
     await notificationHandlerMiddleware(req, data.id);
     return res.status(200).json(data);
