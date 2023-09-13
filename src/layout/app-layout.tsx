@@ -190,17 +190,17 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   loading = isLoading;
 
   const MockedLinkItems: Array<NavItemPropsInterface> = [
-    { name: 'Users', icon: FiUsers, path: '/users', entity: 'user', service: AccessServiceEnum.PROJECT },
+    // { name: 'Users', icon: FiUsers, path: '/users', entity: 'user', service: AccessServiceEnum.PROJECT },
 
-    {
-      name: 'Organizations',
-      path: isTenantUser ? `/organizations/view/${data?.[0]?.id}` : '/organizations',
-      entity: 'organization',
-      service: AccessServiceEnum.PROJECT,
-      icon: FiBriefcase,
-    },
+    // {
+    //   name: 'Organizations',
+    //   path: isTenantUser ? `/organizations/view/${data?.[0]?.id}` : '/organizations',
+    //   entity: 'organization',
+    //   service: AccessServiceEnum.PROJECT,
+    //   icon: FiBriefcase,
+    // },
     { name: 'Bots', path: '/bots', entity: 'bot', service: AccessServiceEnum.PROJECT, icon: FiCpu },
-    { name: 'Links', path: '/links', entity: 'link', service: AccessServiceEnum.PROJECT, icon: FiLink },
+    // { name: 'Links', path: '/links', entity: 'link', service: AccessServiceEnum.PROJECT, icon: FiLink },
     { name: 'Searches', path: '/searches', entity: 'search', service: AccessServiceEnum.PROJECT, icon: FiSearch },
 
     /** Add navigation item here **/
@@ -229,9 +229,9 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
           </Box>
         </Flex>
         <Box className="main-nav">
-          <NavItem key="dashboard" icon={HomeIcon} path={'/dashboard'} isActive={isActiveRoute('/dashboard')}>
+          {/* <NavItem key="dashboard" icon={HomeIcon} path={'/dashboard'} isActive={isActiveRoute('/dashboard')}>
             Dashboard
-          </NavItem>
+          </NavItem> */}
           {MockedLinkItems.map((link) => (
             <NavItem key={link.name} icon={link.icon} path={link.path} isActive={isActiveRoute(link.path)}>
               {link.name}
