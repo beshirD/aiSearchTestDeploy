@@ -1,11 +1,12 @@
+-- CreateExtension
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
 -- CreateTable
 CREATE TABLE "bot" (
     "id" UUID NOT NULL DEFAULT gen_random_uuid(),
     "name" VARCHAR(255) NOT NULL,
     "description" VARCHAR(255),
     "organization_id" UUID NOT NULL,
-    "status" VARCHAR(255) NOT NULL,
-    "type" VARCHAR(255) NOT NULL,
     "created_at" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
@@ -83,4 +84,3 @@ ALTER TABLE "organization" ADD CONSTRAINT "organization_user_id_fkey" FOREIGN KE
 
 -- AddForeignKey
 ALTER TABLE "search" ADD CONSTRAINT "search_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "user"("id") ON DELETE CASCADE ON UPDATE NO ACTION;
-
