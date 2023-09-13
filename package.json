@@ -10,6 +10,7 @@
     "postinstall": "prisma generate && node postinstall.js"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.6.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -35,6 +36,7 @@
     "next": "13.1.1",
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.3",
+    "puppeteer": "^21.2.1",
     "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-datepicker": "^4.11.0",

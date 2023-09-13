@@ -28,12 +28,12 @@ async function createTableForUser(apiKey:any) {
   const tableName = `bot_${apiKey}`;
 
   const createTableQuery = `
-    CREATE TABLE IF NOT EXISTS "${tableName}" (
+    CREATE TABLE IF NOT EXISTS "bot_${apiKey}" (
       id bigserial,
       content text null,
       metadata jsonb null,
       embedding public.vector null,
-      constraint "${tableName}_pkey" primary key (id)
+      constraint "bot_${apiKey}_pkey" primary key (id)
     );
   `;
 
@@ -122,7 +122,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
           orderBy: getOrderByOptions(order),
         }),
       });
-      console.log({response})
     return res.status(200).json(response);
   }
 
@@ -136,6 +135,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const org  = await prisma.organization.findFirst({where:{
       user_id:user[0].id
     }})
+    const org2  = await prisma.organization.findMany()
+
 
     const data = await prisma.bot.create({
       data: {...body,organization_id:org.id},

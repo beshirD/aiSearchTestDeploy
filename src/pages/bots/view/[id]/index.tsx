@@ -14,6 +14,7 @@ import {
   InputGroup,
   InputRightElement,
   IconButton,
+  Code,
 } from '@chakra-ui/react';
 import Breadcrumbs from 'components/breadcrumb';
 import { Error } from 'components/error';
@@ -54,6 +55,7 @@ function BotViewPage() {
         relations: ['organization'],
       }),
   );
+  const baseUrl = window.location.origin;
   const [showCheckIcon, setShowCheckIcon] = useState(false);
 
   const copyText = () => {
@@ -67,7 +69,15 @@ function BotViewPage() {
   };
   const [deleteError, setDeleteError] = useState(null);
   const [createError, setCreateError] = useState(null);
-
+  const codeSnippet = `fetch('<your-API-endpoint>', {
+    method: 'POST',
+    headers: {
+        'token': '<Your token>'
+    },
+    body: JSON.stringify({
+        'query': <Your Query>
+    })
+});`;
   return (
     <AppLayout
       breadcrumbs={
@@ -144,7 +154,7 @@ function BotViewPage() {
                 <FormListItem label="Description" text={data?.description} />
                 <Box pt="3">
                   <Text fontSize="2xl" fontWeight="bold" p="2">
-                    API Key
+                    API Token
                   </Text>
                   <InputGroup>
                     <Input value={data.id} p="2" />
@@ -156,6 +166,29 @@ function BotViewPage() {
                       )}
                     </InputRightElement>
                   </InputGroup>
+                </Box>
+                <Box pt="3">
+                  <Text fontSize="2xl" fontWeight="bold" p="2">
+                    API Endpoint
+                  </Text>
+                  <InputGroup>
+                    <Input value={`${baseUrl}/api/ai-search`} p="2" />
+                    <InputRightElement>
+                      {showCheckIcon ? (
+                        <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
+                      ) : (
+                        <IconButton aria-label="Copy" icon={<FiCopy />} onClick={copyText} size="sm" />
+                      )}
+                    </InputRightElement>
+                  </InputGroup>
+                </Box>
+                <Box pt={3}>
+                  you can use the code as follows
+                  <Box>
+                    <Code  p={3} colorScheme="gray" >
+                    <pre>{codeSnippet}</pre>
+                      </Code>
+                  </Box>
                 </Box>
               </List>
             </FormWrapper>

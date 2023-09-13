@@ -5,8 +5,8 @@ import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { SupabaseVectorStore } from 'langchain/vectorstores/supabase';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { getServerSession } from '@roq/nextjs';
-import pdf from 'pdf-parse'; 
-import mammoth from 'mammoth'; 
+import pdf from 'pdf-parse'; // Import pdf-parse library
+import mammoth from 'mammoth'; // Import mammoth library
 
 const supabaseUrl = process.env.SUPABASE_BASE_URL;
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -63,7 +63,7 @@ export default async (req: any, res: any) => {
       chunkOverlap: 50,
     });
     const docs = await textSplitter.createDocuments([text]);
-    const embeddings = await createEmbeddings(docs,req.query.id);
+    const embeddings = await createEmbeddings(docs,roqUserId);
 
     return res.status(200).json({ message: 'File uploaded successfully' });
   });
@@ -85,8 +85,8 @@ const createEmbeddings = async (docs:any,tableName:string) => {
     new OpenAIEmbeddings({ openAIApiKey: openaikey }),
     {
       client,
-      tableName:`bot_${tableName}`,
-      queryName: `match_bot_${tableName}`, 
+      tableName:`user_${tableName}`,
+      queryName: `match_user_${tableName}`, 
     }
   );
 };
