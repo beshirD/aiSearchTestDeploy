@@ -114,7 +114,7 @@ export default function AppLayout({ children, breadcrumbs }: AppLayoutProps) {
   }, [isMd, isOpen, onClose]);
 
   return (
-    <Box h={'100vh'} bg={'base.100'}>
+    <Box h={'100vh'} bg={'base.100'} backgroundColor="#1a202c">
       <ConfigureCodeBanner
         isHelpBoxVisible={helpBoxDisclosure.isOpen}
         isBannerVisible={isBannerVisible}

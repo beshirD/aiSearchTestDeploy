@@ -6,17 +6,12 @@ import {
   useAuthorizationApi,
 } from '@roq/nextjs';
 import { compose } from 'lib/compose';
-import { Box, Button, Flex, IconButton, Link, Text, TextProps } from '@chakra-ui/react';
+import { Box, Button, Flex, IconButton, Text, TextProps } from '@chakra-ui/react';
 import { ColumnDef } from '@tanstack/react-table';
 import { Error } from 'components/error';
 import { SearchInput } from 'components/search-input';
 import Table from 'components/table';
 import { useDataTableParams, ListDataFiltersType } from 'components/table/hook/use-data-table-params.hook';
-import { DATE_TIME_FORMAT } from 'const';
-import d from 'dayjs';
-import parseISO from 'date-fns/parseISO';
-import format from 'date-fns/format';
-import AppLayout from 'layout/app-layout';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useCallback, useState } from 'react';
@@ -108,22 +103,7 @@ export function BotListPage(props: BotListPageProps) {
   const columns: ColumnType[] = [
     { id: 'name', header: 'Name', accessorKey: 'name' },
     { id: 'description', header: 'Description', accessorKey: 'description' },
-    // hasAccess('organization', AccessOperationEnum.READ, AccessServiceEnum.PROJECT)
-    //   ? {
-    //       id: 'organization',
-    //       header: 'Organization',
-    //       accessorKey: 'organization',
-    //       cell: ({ row: { original: record } }: any) => (
-    //         <Link
-    //           as={NextLink}
-    //           onClick={(e) => e.stopPropagation()}
-    //           href={`/organizations/view/${record.organization?.id}`}
-    //         >
-    //           {record.organization?.name}
-    //         </Link>
-    //       ),
-    //     }
-    //   : null,
+
     !hideActions
       ? {
           id: 'actions',
@@ -226,7 +206,7 @@ export function BotListPage(props: BotListPageProps) {
               padding="0rem 0.75rem"
               fontSize={'0.875rem'}
               fontWeight={600}
-              bg="state.info.main"
+              bg="primary.main"
               borderRadius={'6px'}
               color="base.100"
               _hover={{

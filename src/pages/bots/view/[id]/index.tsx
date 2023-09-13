@@ -1,20 +1,18 @@
+export {};
 import {
   Box,
   Center,
   Flex,
-  Link,
-  List,
-  ListItem,
-  Spinner,
-  Stack,
   Text,
-  Image,
   Button,
   Input,
   InputGroup,
   InputRightElement,
   IconButton,
   Code,
+  Spinner,
+  List,
+  ListItem,
 } from '@chakra-ui/react';
 import Breadcrumbs from 'components/breadcrumb';
 import { Error } from 'components/error';
@@ -36,13 +34,13 @@ import {
   useAuthorizationApi,
   withAuthorization,
 } from '@roq/nextjs';
-import { UserPageTable } from 'components/user-page-table';
-import { EntityImage } from 'components/entity-image';
 import { FiCheck, FiCopy, FiEdit2 } from 'react-icons/fi';
-
 import { getBotById } from 'apiSdk/bots';
 import { BotInterface } from 'interfaces/bot';
 import SearchPage from 'components/search-page';
+
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 function BotViewPage() {
   const { hasAccess } = useAuthorizationApi();
@@ -56,28 +54,36 @@ function BotViewPage() {
       }),
   );
   const baseUrl = window.location.origin;
-  const [showCheckIcon, setShowCheckIcon] = useState(false);
+  const [isCopyingToken, setIsCopyingToken] = useState(false); // State for API Token copy icon
+  const [isCopyingEndpoint, setIsCopyingEndpoint] = useState(false); // State for API Endpoint copy icon
 
-  const copyText = () => {
-    const textToCopy = data.id;
+  const copyText = (type) => {
+    const textToCopy = type === 'token' ? data.id : `${baseUrl}/api/ai-search`;
     navigator.clipboard.writeText(textToCopy);
-    setShowCheckIcon(true);
 
-    setTimeout(() => {
-      setShowCheckIcon(false);
-    }, 3000);
+    if (type === 'token') {
+      setIsCopyingToken(true);
+      setTimeout(() => {
+        setIsCopyingToken(false);
+      }, 3000);
+    } else {
+      setIsCopyingEndpoint(true);
+      setTimeout(() => {
+        setIsCopyingEndpoint(false);
+      }, 3000);
+    }
   };
-  const [deleteError, setDeleteError] = useState(null);
-  const [createError, setCreateError] = useState(null);
-  const codeSnippet = `fetch('<your-API-endpoint>', {
-    method: 'POST',
+
+  const codeSnippet = `fetch("<your-API-endpoint>", {
+    method: "POST",
     headers: {
-        'token': '<Your token>'
+      token: "<Your token>"
     },
     body: JSON.stringify({
-        'query': <Your Query>
+      query: "<Your Query>"
     })
 });`;
+
   return (
     <AppLayout
       breadcrumbs={
@@ -108,15 +114,9 @@ function BotViewPage() {
         ) : (
           <>
             <FormWrapper wrapperProps={{ border: 'none', gap: 3, p: 0 }}>
-              <Flex alignItems="center" w="full" justifyContent={'space-between'}>
+              <Flex alignItems="center" w="full" justifyContent="space-between">
                 <Box>
-                  <Text
-                    sx={{
-                      fontSize: '1.875rem',
-                      fontWeight: 700,
-                      color: 'base.content',
-                    }}
-                  >
+                  <Text fontSize="1.875rem" fontWeight={700} color="base.content">
                     Bot Details
                   </Text>
                 </Box>
@@ -150,52 +150,67 @@ function BotViewPage() {
                 }}
               >
                 <FormListItem label="Name" text={data?.name} />
-
                 <FormListItem label="Description" text={data?.description} />
-                <Box pt="3">
+
+                <Box pt={3}>
                   <Text fontSize="2xl" fontWeight="bold" p="2">
                     API Token
                   </Text>
                   <InputGroup>
                     <Input value={data.id} p="2" />
                     <InputRightElement>
-                      {showCheckIcon ? (
+                      {isCopyingToken ? (
                         <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
                       ) : (
-                        <IconButton aria-label="Copy" icon={<FiCopy />} onClick={copyText} size="sm" />
+                        <IconButton aria-label="Copy" icon={<FiCopy />} onClick={() => copyText('token')} size="sm" />
                       )}
                     </InputRightElement>
                   </InputGroup>
                 </Box>
-                <Box pt="3">
+
+                <Box
+                  pt={3}
+                  mt="4"
+                  border="1px"
+                  borderColor="gray.600"
+                  borderStyle="dashed"
+                  minH={120}
+                  p="4"
+                  borderRadius="md"
+                >
                   <Text fontSize="2xl" fontWeight="bold" p="2">
                     API Endpoint
                   </Text>
                   <InputGroup>
                     <Input value={`${baseUrl}/api/ai-search`} p="2" />
                     <InputRightElement>
-                      {showCheckIcon ? (
+                      {isCopyingEndpoint ? (
                         <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
                       ) : (
-                        <IconButton aria-label="Copy" icon={<FiCopy />} onClick={copyText} size="sm" />
+                        <IconButton
+                          aria-label="Copy"
+                          icon={<FiCopy />}
+                          onClick={() => copyText('endpoint')}
+                          size="sm"
+                        />
                       )}
                     </InputRightElement>
                   </InputGroup>
-                </Box>
-                <Box pt={3}>
-                  you can use the code as follows
-                  <Box>
-                    <Code  p={3} colorScheme="gray" >
-                    <pre>{codeSnippet}</pre>
-                      </Code>
+
+                  <Box pt={3}>
+                    <Text>You can use the code as follows:</Text>
+                    <Box>
+                      <SyntaxHighlighter language="javascript" style={atomOneDark}>
+                        {codeSnippet}
+                      </SyntaxHighlighter>
+                    </Box>
                   </Box>
                 </Box>
               </List>
             </FormWrapper>
-
-            <SearchPage apiKey={data.id} />
           </>
         )}
+        <SearchPage apiKey={data?.id} />
       </Box>
     </AppLayout>
   );
