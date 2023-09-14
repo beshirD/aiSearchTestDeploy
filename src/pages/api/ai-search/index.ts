@@ -13,28 +13,27 @@ const client = createClient(supabaseUrl, supabaseServiceKey);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: any, res: any) => {
-    try {
-        
-        const token = req?.headers.token;
-        const body = req.body;
-        const result = await query(body?.query, token);
-        return res.status(200).json({ data: result });
-    } catch (error) {
-        console.log("error:",error);
-    }
+  try {
+    const token = req?.headers.token;
+    const body = req.body;
+    const result = await query(body?.query, token);
+    return res.status(200).json({ data: result });
+  } catch (error) {
+    console.log('error:', error);
+  }
 };
 const query = async (query: any, tableName: string) => {
   const chat = new ChatOpenAI({
     modelName: 'gpt-3.5-turbo',
-    apiKey: openaikey,
+    configuration: {
+      apiKey: openaikey,
+    },
   });
   const vectorStore = await SupabaseVectorStore.fromExistingIndex(new OpenAIEmbeddings(), {
     client,
-    tableName:`bot_${tableName}`,
-    queryName: `match_bot_${tableName}`, 
+    tableName: `bot_${tableName}`,
+    queryName: `match_bot_${tableName}`,
   });
-
-
 
   // const qa_template = `Use the following pieces of context to answer the question at the end. If you don't know the answer or need further clarification, please let me know, and I'll do my best to assist you based on the available documents.
   // {context}

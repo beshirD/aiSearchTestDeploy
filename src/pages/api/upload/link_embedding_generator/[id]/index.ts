@@ -38,7 +38,7 @@ const createEmbeddings = async (docs:any,tableName:string) => {
       {
         client,
         tableName:`bot_${tableName}`,
-        queryName: `match_bot_${tableName}`, 
+    queryName: `match_bot_${tableName}`, 
       }
     );
   };
@@ -78,7 +78,7 @@ const getTextFromLink = async (url:string, maxLinks = 50) => {
 
                 visitedPageCount++;
             } catch (error) {
-                console.error(`Error crawling ${currentUrl}: ${error?.message}`);
+                console.error(`Error crawling ${currentUrl}: ${error}`);
             }
         }
     };

@@ -114,7 +114,7 @@ export default function AppLayout({ children, breadcrumbs }: AppLayoutProps) {
   }, [isMd, isOpen, onClose]);
 
   return (
-    <Box h={'100vh'} bg={'base.100'} backgroundColor="#1a202c">
+    <Box h={'100vh'} bg={'base.100'} >
       <ConfigureCodeBanner
         isHelpBoxVisible={helpBoxDisclosure.isOpen}
         isBannerVisible={isBannerVisible}
@@ -201,7 +201,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
     // },
     { name: 'Bots', path: '/bots', entity: 'bot', service: AccessServiceEnum.PROJECT, icon: FiCpu },
     // { name: 'Links', path: '/links', entity: 'link', service: AccessServiceEnum.PROJECT, icon: FiLink },
-    { name: 'Searches', path: '/searches', entity: 'search', service: AccessServiceEnum.PROJECT, icon: FiSearch },
+    // { name: 'Searches', path: '/searches', entity: 'search', service: AccessServiceEnum.PROJECT, icon: FiSearch },
 
     /** Add navigation item here **/
   ].filter((e) => hasAccess(e.entity, AccessOperationEnum.READ, AccessServiceEnum.PROJECT));

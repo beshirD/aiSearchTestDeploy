@@ -41,6 +41,7 @@ import SearchPage from 'components/search-page';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import TabView from 'components/tab-view';
 
 function BotViewPage() {
   const { hasAccess } = useAuthorizationApi();
@@ -57,7 +58,7 @@ function BotViewPage() {
   const [isCopyingToken, setIsCopyingToken] = useState(false); // State for API Token copy icon
   const [isCopyingEndpoint, setIsCopyingEndpoint] = useState(false); // State for API Endpoint copy icon
 
-  const copyText = (type) => {
+  const copyText = (type: string) => {
     const textToCopy = type === 'token' ? data.id : `${baseUrl}/api/ai-search`;
     navigator.clipboard.writeText(textToCopy);
 
@@ -83,6 +84,58 @@ function BotViewPage() {
       query: "<Your Query>"
     })
 });`;
+
+  const RestAPI = () => {
+    return (
+      <Box>
+        <Box pt={3}>
+          <Text fontSize="2xl" fontWeight="bold" p="2">
+            API Token
+          </Text>
+          <InputGroup>
+            <Input value={data.id} p="2" />
+            <InputRightElement>
+              {isCopyingToken ? (
+                <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
+              ) : (
+                <IconButton aria-label="Copy" icon={<FiCopy />} onClick={() => copyText('token')} size="sm" />
+              )}
+            </InputRightElement>
+          </InputGroup>
+        </Box>
+
+        <Box pt={3} mt="4" border="1px" borderColor="gray.600" borderStyle="dashed" minH={120} p="4" borderRadius="md">
+          <Text fontSize="2xl" fontWeight="bold" p="2">
+            API Endpoint
+          </Text>
+          <InputGroup>
+            <Input value={`${baseUrl}/api/ai-search`} p="2" />
+            <InputRightElement>
+              {isCopyingEndpoint ? (
+                <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
+              ) : (
+                <IconButton aria-label="Copy" icon={<FiCopy />} onClick={() => copyText('endpoint')} size="sm" />
+              )}
+            </InputRightElement>
+          </InputGroup>
+
+          <Box pt={3}>
+            <Text>You can use the code as follows:</Text>
+            <Box >
+              <SyntaxHighlighter language="javascript" style={atomOneDark}>
+                {codeSnippet}
+              </SyntaxHighlighter>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    );
+  };
+
+  const tabs = [
+    { label: 'Sources', content: <SearchPage apiKey={data?.id} /> },
+    { label: 'Get REST API', content: <RestAPI /> },
+  ];
 
   return (
     <AppLayout
@@ -151,66 +204,13 @@ function BotViewPage() {
               >
                 <FormListItem label="Name" text={data?.name} />
                 <FormListItem label="Description" text={data?.description} />
-
-                <Box pt={3}>
-                  <Text fontSize="2xl" fontWeight="bold" p="2">
-                    API Token
-                  </Text>
-                  <InputGroup>
-                    <Input value={data.id} p="2" />
-                    <InputRightElement>
-                      {isCopyingToken ? (
-                        <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
-                      ) : (
-                        <IconButton aria-label="Copy" icon={<FiCopy />} onClick={() => copyText('token')} size="sm" />
-                      )}
-                    </InputRightElement>
-                  </InputGroup>
-                </Box>
-
-                <Box
-                  pt={3}
-                  mt="4"
-                  border="1px"
-                  borderColor="gray.600"
-                  borderStyle="dashed"
-                  minH={120}
-                  p="4"
-                  borderRadius="md"
-                >
-                  <Text fontSize="2xl" fontWeight="bold" p="2">
-                    API Endpoint
-                  </Text>
-                  <InputGroup>
-                    <Input value={`${baseUrl}/api/ai-search`} p="2" />
-                    <InputRightElement>
-                      {isCopyingEndpoint ? (
-                        <IconButton aria-label="Check" icon={<FiCheck />} size="sm" />
-                      ) : (
-                        <IconButton
-                          aria-label="Copy"
-                          icon={<FiCopy />}
-                          onClick={() => copyText('endpoint')}
-                          size="sm"
-                        />
-                      )}
-                    </InputRightElement>
-                  </InputGroup>
-
-                  <Box pt={3}>
-                    <Text>You can use the code as follows:</Text>
-                    <Box>
-                      <SyntaxHighlighter language="javascript" style={atomOneDark}>
-                        {codeSnippet}
-                      </SyntaxHighlighter>
-                    </Box>
-                  </Box>
-                </Box>
               </List>
             </FormWrapper>
           </>
         )}
-        <SearchPage apiKey={data?.id} />
+        <Box pt={8}>
+        <TabView tabs={tabs} />
+        </Box>
       </Box>
     </AppLayout>
   );

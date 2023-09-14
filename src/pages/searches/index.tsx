@@ -264,7 +264,7 @@ export function SearchListPage(props: SearchListPageProps) {
     //   {table}
     // </Flex>
     <Box>
-      <SearchPage />
+      {/* <SearchPage /> */}
     </Box>
   );
 }

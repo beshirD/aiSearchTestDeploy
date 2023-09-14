@@ -76,7 +76,7 @@ const getTextFromLink = async (url:string, maxLinks = 50) => {
 
                 visitedPageCount++;
             } catch (error) {
-                console.error(`Error crawling ${currentUrl}: ${error?.message}`);
+                console.error(`Error crawling ${currentUrl}: ${error}`);
             }
         }
     };
